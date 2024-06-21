@@ -11,4 +11,5 @@ RUN echo 'Installing additional packages...' && \
 COPY modsbots.sh /modsbots.sh
 RUN chmod 744 /modsbots.sh
 COPY index.js /index.js
+COPY package.json /package.json
 CMD ["/bin/bash","/modsbots.sh"]
