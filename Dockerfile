@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM node:latest
 RUN echo 'Installing additional packages...' && \
 	export DEBIAN_FRONTEND=noninteractive && \
 	apt-get update && \
