@@ -5,8 +5,8 @@ RUN echo 'Installing additional packages...' && \
 	apt-get install \
 	sudo \
 	wget \
-    unzip \
-	screen \
+    	unzip \
+	nodejs \
 	-y --show-progress 
 COPY modsbots.sh /modsbots.sh
 RUN chmod 744 /modsbots.sh
