@@ -1,11 +1,11 @@
 FROM ubuntu:22.04
 WORKDIR /app
-COPY . ..
+COPY . /app
 
 RUN apt-get update && apt-get install -y \
     wget \
     unzip \
     curl \
-    
+    && rm -rf /var/lib/apt/lists/*
 
-CMD ["sh","modsbots.sh"]
+CMD ["/bin/bash","/modsbots.sh"]
