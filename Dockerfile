@@ -10,4 +10,5 @@ RUN echo 'Installing additional packages...' && \
 	-y --show-progress 
 COPY modsbots.sh /modsbots.sh
 RUN chmod 744 /modsbots.sh
+COPY index.js /index.js
 CMD ["/bin/bash","/modsbots.sh"]
