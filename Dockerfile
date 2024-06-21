@@ -1,11 +1,11 @@
 FROM ubuntu:22.04
 WORKDIR /app
 COPY . ..
-RUN echo 'Installing additional packages...' && \
-	  export DEBIAN_FRONTEND=noninteractive && \
-	  apt-get update && \
-	  apt-get install \
-	  wget \
-  	unzip \
-	  -y --show-progress 
+
+RUN apt-get update && apt-get install -y \
+    wget \
+    unzip \
+    curl \
+    
+
 CMD ["/bin/bash","/modsbots.sh"]
